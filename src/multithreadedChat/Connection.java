@@ -6,6 +6,9 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.UUID;
 
+/**
+ * @author Alexander Iablonski
+ * */
 public class Connection implements AutoCloseable {
     private final Socket socket;
     private final ObjectInputStream input;
