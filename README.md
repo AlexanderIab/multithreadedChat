@@ -1,17 +1,17 @@
-#### Многопоточный чат:
+#"Multi-threaded chat"
 
-Клиент устанавливает соединение с сервером и не разрывает его после каждой отправки сообщения
+The client establishes a connection with the server and does not break it after each message is sent
 
-У клиента (кроме, основного) два потока:
-1. отправитель соощений (пользователь вводит сообщение в консоль, поток отправляет его на сервер)
-2. получатель сообщений
+The client (except the main one) has two threads:
 
-Клиент и сервер передают друг другу экземпляры класса SimpleMessage
+Sender of messages (user types a message into the console, the thread sends it to the server)
 
-Сервер
-Потоки сервера:
-1. на каждое подключение выделяется отдельный поток,
-   который принимает сообщения от клиента и добавляет их в блокирующую очередь
+Message recipient
+Client and server pass instances of the SimpleMessage class to each other
 
-2. один поток - отправитель сообщений: забирает сообщение из блокирующей очереди и
-   рассылает сообщения всем клиентам, кроме отправителя
+Server.
+Threads:
+
+A separate thread is allocated for each connection, which receives messages from the client and adds them to the blocking queue
+
+One thread - the sender of messages: picks up a message from the blocking queue and sends messages to all clients except the sender
