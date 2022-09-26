@@ -3,6 +3,9 @@ package multithreadedChat;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+/**
+ * @author Alexander Iablonski
+ * */
 public class SimpleMessage implements Serializable {
     private final String sender;
     private final String text;
