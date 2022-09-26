@@ -1,4 +1,4 @@
-#"Multi-threaded chat"
+# Multi-threaded chat
 
 The client establishes a connection with the server and does not break it after each message is sent
 
