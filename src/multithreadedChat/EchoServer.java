@@ -7,6 +7,9 @@ import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * @author Alexander Iablonski
+ * */
 public class EchoServer {
     private final int port;
     private final Map<UUID, Connection> connectionList;
